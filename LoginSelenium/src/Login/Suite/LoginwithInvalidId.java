@@ -1,65 +1,65 @@
-package selenium.demo;
-import java.util.concurrent.TimeUnit;
+package Login.Suite;
+
 import java.net.URL;
 
+import org.junit.AfterClass;
+import org.junit.Assert;
 import org.junit.BeforeClass;
 import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-
-public class Lambdatest {
+public class LoginwithInvalidId {
 	public static RemoteWebDriver driver = null;
     public String url = "https://www.lambdatest.com/";
     public static final String  username= "ines.zaier";
     public static final String auth_key = "rLaLDZMzRJiu6nTBkvscHJhVWze745q3djP9scdPXcdmvVFM1t";
     public static final String URL = "@hub.lambdatest.com/wd/hub";
-    boolean status = false;
+    static boolean status = false;
  
- 
+
+   
     @Test
     public void login () {
         // TODO Auto-generated method stub
-        try {
+    	 driver.manage().window().maximize();
+  	   driver.get("http://www.gmail.com/");	
  
-            driver.manage().window().maximize();
-            driver.get("http://www.gmail.com/");
  
-            driver.findElement(By.id("identifierId") ).sendKeys("ines.zaier@esprit.tn");
-    		driver.findElement(By.id("identifierNext") ).click();
+           WebElement login = driver.findElement(By.id("identifierId") );
+		        
+		   login.sendKeys("ines.zaier@esprrrit.tn");
+		  
+          
+          
+          WebElement loginNext =driver.findElement(By.id("identifierNext") );
+		    
+		   loginNext.click();
+		       
             
-    		new WebDriverWait(driver, 10).until(ExpectedConditions.elementToBeClickable(By.xpath("//input[@name='password']"))).sendKeys("183JFT0875");
-            driver.findElement(By.id("passwordNext")).click();
+    	
  
-            String at = driver.getTitle();
-    		String et = "gmail";
- 
-            if (at.equalsIgnoreCase(et)) {
-                System.out.println("Test passed");
+            String expectedErrorMsg = "Couldn't find your Google Account";
+            WebElement exp = driver.findElement(By.xpath("//div[@class='o6cuMc']"));
+            String actualErrorMsg = exp.getText();
+            Assert.assertEquals(actualErrorMsg, expectedErrorMsg);
+            
+            if (actualErrorMsg.equalsIgnoreCase(expectedErrorMsg)) {
+                System.out.println("Test passed ," + actualErrorMsg);
                 status = true; //Lambda status will be reflected as passed
               } else {
                 System.out.println("Test failed"); //Lambda status will be reflected as passed
  
             }
-        } catch (Exception e) {
-            System.out.println(e.getMessage());
-        }
-        finally {
-            tearDown();
-        }
  
  
     }
- 
- 
- 
+   
     @BeforeClass
     public static void setUp() {
         DesiredCapabilities capabilities = new DesiredCapabilities();
@@ -82,14 +82,11 @@ public class Lambdatest {
         }
  
     }
-    private void tearDown () {
-        if (driver != null) {
-            ((JavascriptExecutor) driver).executeScript("lambda-status=" + status); //Lambda status will be reflected as either passed/ failed
- 
-            driver.quit();
- 
-            System.out.println("The setup process is completed");
- 
-        }
-    }
+    @AfterClass
+    public static void tearDown() throws Exception {
+    	 if (driver != null) {
+    	 ((JavascriptExecutor) driver).executeScript("lambda-status=" + status);
+    	 driver.quit();
+    	 }
+    	 }
 }
