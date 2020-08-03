@@ -44,5 +44,9 @@
 	<classpathentry kind="lib" path="C:/Users/lenovoo/Desktop/slenim/selenium-server-3.9.1/libs/xml-apis-1.4.01.jar"/>
 	<classpathentry kind="lib" path="C:/Users/lenovoo/Desktop/slenim/selenium-server-standalone-3.9.1.jar"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/5"/>
+	<classpathentry kind="lib" path="C:/Users/lenovoo/Desktop/Esprit/jtidy-r938/jtidy-r938.jar"/>
+	<classpathentry kind="lib" path="C:/Users/lenovoo/Desktop/Esprit/javax.mail.jar"/>
+	<classpathentry kind="lib" path="C:/Users/lenovoo/Desktop/Esprit/log4j-1.2.17.jar"/>
+	<classpathentry kind="lib" path="C:/Users/lenovoo/Desktop/Esprit/mysql-connector-java-5.1.47-bin.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

@@ -1,0 +1,25 @@
+03-08-2020 11:09:10 INFO [LoginwithInvalidId]: Entered setup process.
+03-08-2020 11:09:15 INFO [LoginwithInvalidId]: Setup process ended.
+03-08-2020 11:09:15 INFO [LoginwithInvalidId]: Started the automated function  : Test_LoginwithInvalidId
+03-08-2020 11:09:24 INFO [LoginwithInvalidId]: Entered a valid URL.
+03-08-2020 11:09:24 INFO [LoginwithInvalidId]: Entered an invalid Email Address.
+03-08-2020 11:09:24 INFO [LoginwithInvalidId]: Clicked on the Next Button.
+03-08-2020 11:09:29 INFO [LoginwithInvalidId]: search for xpath //div[@class='o6cuMc']
+03-08-2020 11:09:29 INFO [LoginwithInvalidId]: already insered , it should be updated
+03-08-2020 11:09:34 INFO [LoginwithInvalidId]: Started the automated function  : Test_LoginWithInvalidPassword
+03-08-2020 11:09:42 INFO [LoginwithInvalidId]: Entered a valid URL.
+03-08-2020 11:09:43 INFO [LoginwithInvalidId]: Entered a valid Email Address.
+03-08-2020 11:09:43 INFO [LoginwithInvalidId]: Clicked on the Next Button.
+03-08-2020 11:09:45 INFO [LoginwithInvalidId]: Entered an invalid password.
+03-08-2020 11:09:45 INFO [LoginwithInvalidId]: Clicked on the log in Button.
+03-08-2020 11:09:49 INFO [LoginwithInvalidId]: Started the automated function  : Test_LoginWithInvalidUrl
+03-08-2020 11:09:59 INFO [LoginwithInvalidId]: Entered an invalid URL.
+03-08-2020 11:10:21 INFO [LoginwithInvalidId]: Entered a valid URL.
+03-08-2020 11:10:22 INFO [LoginwithInvalidId]: Entered a valid Email Address.
+03-08-2020 11:10:22 INFO [LoginwithInvalidId]: Clicked on the Next Button.
+03-08-2020 11:10:25 INFO [LoginwithInvalidId]: Entered a valid password.
+03-08-2020 11:10:25 INFO [LoginwithInvalidId]: Clicked on the Login Button.
+03-08-2020 11:10:25 INFO [LoginwithInvalidId]: la fonction autamatique  : Test_LoginwithValidCridentials
+03-08-2020 11:10:25 INFO [LoginwithInvalidId]: search for xpath //input[@name='password']
+03-08-2020 11:10:25 INFO [LoginwithInvalidId]: already insered , it should be updated
+03-08-2020 11:10:25 INFO [LoginwithInvalidId]: already insered , it should be updated
