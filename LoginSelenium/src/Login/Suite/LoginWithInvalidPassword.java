@@ -18,6 +18,8 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.w3c.dom.Node;
 import org.w3c.tidy.Tidy;
 
+import database.connexion.ConnexionBD;
+
 import java.io.BufferedInputStream;
 import java.io.IOException;
 import java.net.MalformedURLException;
@@ -50,7 +52,15 @@ public class LoginWithInvalidPassword {
     private PreparedStatement pste;
     private  ResultSet rs;
     
-    static Logger log = Logger.getLogger(LoginwithInvalidId.class.getName());
+    
+    
+    
+    public LoginWithInvalidPassword() {
+    	  con = ConnexionBD.getInstance().getCnx();
+		// TODO Auto-generated constructor stub
+	}
+
+	static Logger log = Logger.getLogger(LoginwithInvalidId.class.getName());
     @Rule public TestName name = new TestName();
 
 	
@@ -91,6 +101,8 @@ public class LoginWithInvalidPassword {
 		 
 
 		  String expectedErrorMsg = "Wrong password. Try again or click Forgot password to reset it.";
+		  if (driver.findElement(By.xpath(xpath)).isDisplayed())
+		  {
         WebElement exp = driver.findElement(By.xpath(xpath));
         log.info("search for xpath " +xpath);   
         String actualErrorMsg = exp.getText();
@@ -116,6 +128,17 @@ public class LoginWithInvalidPassword {
             Add(nom, xpath , status);
          
         }
+        
+		  }
+		  else 
+		  {
+			  System.out.println("Test failed"); //Lambda status will be reflected as passed
+	            if(IsExisting(nom))
+	            {Update(nom, xpath , status);}
+	            else
+	            Add(nom, xpath , status);
+		  }
+        
 	    }else
 	    	  System.out.println("driver gives null");
 	}
