@@ -93,7 +93,10 @@ public class LoginWithInvalidPassword {
 			   driver.findElement(By.id("passwordNext")).click();
 			   log.info("Clicked on the log in Button.");   
 			   String xpath = "//span[contains(text(),'Wrong password. Try again or click Forgot password to reset it.')]";
-		          Add(nom, xpath , status);
+			   if(IsExisting(nom))
+               {Update(nom, xpath , status);}
+               else
+               Add(nom, xpath , status); 
 		  new WebDriverWait(driver, 10);
 		  String cureent = driver.getCurrentUrl().toString() ;
 		  System.out.println("i'm here ," + cureent);
@@ -116,16 +119,14 @@ public class LoginWithInvalidPassword {
             
             if(IsExisting(nom))
             {Update(nom, xpath , status);}
-            else
-            Add(nom, xpath , status);
+  
            
           } else {
         	 // VerifyXpath(cureent, "//span[contains(text(),'Wrong password. Try again or click Forgot password to reset it.')]");
             System.out.println("Test failed"); //Lambda status will be reflected as passed
             if(IsExisting(nom))
             {Update(nom, xpath , status);}
-            else
-            Add(nom, xpath , status);
+            
          
         }
         
