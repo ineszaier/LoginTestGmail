@@ -1,25 +1,26 @@
-05-08-2020 16:24:56 INFO [LoginwithInvalidId]: Entered setup process.
-05-08-2020 16:25:02 INFO [LoginwithInvalidId]: Setup process ended.
-05-08-2020 16:25:03 INFO [LoginwithInvalidId]: Started the automated function  : Test_LoginwithInvalidId
-05-08-2020 16:25:09 INFO [LoginwithInvalidId]: Entered a valid URL.
-05-08-2020 16:25:10 INFO [LoginwithInvalidId]: Entered an invalid Email Address.
-05-08-2020 16:25:10 INFO [LoginwithInvalidId]: Clicked on the Next Button.
-05-08-2020 16:25:15 INFO [LoginwithInvalidId]: search for xpath //div[@class='o6cuMc']
-05-08-2020 16:25:15 INFO [LoginwithInvalidId]: already insered , it should be updated
-05-08-2020 16:25:19 INFO [LoginwithInvalidId]: Started the automated function  : Test_LoginWithInvalidPassword
-05-08-2020 16:25:24 INFO [LoginwithInvalidId]: Entered a valid URL.
-05-08-2020 16:25:25 INFO [LoginwithInvalidId]: Entered a valid Email Address.
-05-08-2020 16:25:25 INFO [LoginwithInvalidId]: Clicked on the Next Button.
-05-08-2020 16:25:27 INFO [LoginwithInvalidId]: Entered an invalid password.
-05-08-2020 16:25:27 INFO [LoginwithInvalidId]: Clicked on the log in Button.
-05-08-2020 16:25:31 INFO [LoginwithInvalidId]: Started the automated function  : Test_LoginWithInvalidUrl
-05-08-2020 16:25:35 INFO [LoginwithInvalidId]: Entered an invalid URL.
-05-08-2020 16:25:44 INFO [LoginwithInvalidId]: Entered a valid URL.
-05-08-2020 16:25:45 INFO [LoginwithInvalidId]: Entered a valid Email Address.
-05-08-2020 16:25:45 INFO [LoginwithInvalidId]: Clicked on the Next Button.
-05-08-2020 16:25:46 INFO [LoginwithInvalidId]: Entered a valid password.
-05-08-2020 16:25:47 INFO [LoginwithInvalidId]: Clicked on the Login Button.
-05-08-2020 16:25:47 INFO [LoginwithInvalidId]: la fonction autamatique  : Test_LoginwithValidCridentials
-05-08-2020 16:25:47 INFO [LoginwithInvalidId]: search for xpath //input[@name='password']
-05-08-2020 16:25:47 INFO [LoginwithInvalidId]: already insered , it should be updated
-05-08-2020 16:25:47 INFO [LoginwithInvalidId]: already insered , it should be updated
+09-08-2020 19:34:16 INFO [LoginwithInvalidId]: Entered setup process.
+09-08-2020 19:34:22 INFO [LoginwithInvalidId]: Setup process ended.
+09-08-2020 19:34:24 INFO [LoginwithInvalidId]: Started the automated function  : Test_LoginwithInvalidId
+09-08-2020 19:34:31 INFO [LoginwithInvalidId]: Entered a valid URL.
+09-08-2020 19:34:32 INFO [LoginwithInvalidId]: Entered an invalid Email Address.
+09-08-2020 19:34:32 INFO [LoginwithInvalidId]: Clicked on the Next Button.
+09-08-2020 19:34:37 INFO [LoginwithInvalidId]: search for xpath //div[@class='o6cuMc']
+09-08-2020 19:34:37 INFO [LoginwithInvalidId]: already insered , it should be updated
+09-08-2020 19:34:42 INFO [LoginwithInvalidId]: Started the automated function  : Test_LoginWithInvalidPassword
+09-08-2020 19:34:47 INFO [LoginwithInvalidId]: Entered a valid URL.
+09-08-2020 19:34:48 INFO [LoginwithInvalidId]: Entered a valid Email Address.
+09-08-2020 19:34:48 INFO [LoginwithInvalidId]: Clicked on the Next Button.
+09-08-2020 19:34:49 INFO [LoginwithInvalidId]: Entered an invalid password.
+09-08-2020 19:34:49 INFO [LoginwithInvalidId]: Clicked on the log in Button.
+09-08-2020 19:34:49 INFO [LoginwithInvalidId]: already insered , it should be updated
+09-08-2020 19:34:53 INFO [LoginwithInvalidId]: Started the automated function  : Test_LoginWithInvalidUrl
+09-08-2020 19:34:59 INFO [LoginwithInvalidId]: Entered an invalid URL.
+09-08-2020 19:35:13 INFO [LoginwithInvalidId]: Entered a valid URL.
+09-08-2020 19:35:14 INFO [LoginwithInvalidId]: Entered a valid Email Address.
+09-08-2020 19:35:14 INFO [LoginwithInvalidId]: Clicked on the Next Button.
+09-08-2020 19:35:17 INFO [LoginwithInvalidId]: Entered a valid password.
+09-08-2020 19:35:17 INFO [LoginwithInvalidId]: Clicked on the Login Button.
+09-08-2020 19:35:17 INFO [LoginwithInvalidId]: la fonction autamatique  : Test_LoginwithValidCridentials
+09-08-2020 19:35:17 INFO [LoginwithInvalidId]: search for xpath //input[@name='password']
+09-08-2020 19:35:17 INFO [LoginwithInvalidId]: already insered , it should be updated
+09-08-2020 19:35:17 INFO [LoginwithInvalidId]: already insered , it should be updated
