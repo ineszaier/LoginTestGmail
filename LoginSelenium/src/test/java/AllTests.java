@@ -1,4 +1,4 @@
-package Login.Suite;
+package test.java;
 
 import org.apache.log4j.xml.DOMConfigurator;
 import org.junit.BeforeClass;
@@ -7,6 +7,12 @@ import org.junit.runner.Result;
 import org.junit.runner.RunWith;
 import org.junit.runners.Suite;
 import org.junit.runners.Suite.SuiteClasses;
+
+import test.java.LoginWithInvalidPassword;
+import test.java.LoginWithInvalidUrl;
+import test.java.LoginwithInvalidId;
+import test.java.LoginwithValidCridentials;
+
 import org.junit.runner.notification.Failure;
 
 import junit.framework.TestSuite;
