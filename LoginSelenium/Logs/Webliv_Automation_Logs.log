@@ -1,35 +1,18 @@
-10-08-2020 11:59:48 INFO [LoginwithInvalidId]: Entered setup process.
-10-08-2020 11:59:57 INFO [LoginwithInvalidId]: Setup process ended.
-10-08-2020 11:59:57 INFO [LoginwithInvalidId]: Started the automated function  : Test_LoginwithInvalidId
-10-08-2020 12:00:37 INFO [LoginwithInvalidId]: Entered a valid URL.
-10-08-2020 12:00:37 INFO [LoginwithInvalidId]: Entered an invalid Email Address.
-10-08-2020 12:00:38 INFO [LoginwithInvalidId]: Clicked on the Next Button.
-10-08-2020 12:00:51 INFO [LoginwithInvalidId]: Started the automated function  : Test_LoginWithInvalidPassword
-10-08-2020 12:01:08 INFO [LoginwithInvalidId]: Entered a valid URL.
-10-08-2020 12:01:09 INFO [LoginwithInvalidId]: Entered a valid Email Address.
-10-08-2020 12:01:09 INFO [LoginwithInvalidId]: Clicked on the Next Button.
-10-08-2020 12:01:34 INFO [LoginwithInvalidId]: Started the automated function  : Test_LoginWithInvalidUrl
-10-08-2020 12:01:44 INFO [LoginwithInvalidId]: Entered an invalid URL.
-10-08-2020 12:02:01 INFO [LoginwithInvalidId]: Entered a valid URL.
-10-08-2020 12:02:02 INFO [LoginwithInvalidId]: Entered a valid Email Address.
-10-08-2020 12:02:07 INFO [LoginwithInvalidId]: Clicked on the Next Button.
-10-08-2020 12:02:17 INFO [LoginwithInvalidId]: Entered setup process.
-10-08-2020 12:02:22 INFO [LoginwithInvalidId]: Setup process ended.
-10-08-2020 12:02:22 INFO [LoginwithInvalidId]: Started the automated function  : Test_LoginwithInvalidId
-10-08-2020 12:02:35 INFO [LoginwithInvalidId]: Entered a valid URL.
-10-08-2020 12:02:36 INFO [LoginwithInvalidId]: Entered an invalid Email Address.
-10-08-2020 12:02:41 INFO [LoginwithInvalidId]: Clicked on the Next Button.
-10-08-2020 12:02:46 INFO [LoginwithInvalidId]: search for xpath //div[@class='o6cuMc']
-10-08-2020 12:02:46 INFO [LoginwithInvalidId]: already insered , it should be updated
-10-08-2020 12:02:51 INFO [LoginwithInvalidId]: Started the automated function  : Test_LoginWithInvalidPassword
-10-08-2020 12:03:01 INFO [LoginwithInvalidId]: Entered a valid URL.
-10-08-2020 12:03:01 INFO [LoginwithInvalidId]: Entered a valid Email Address.
-10-08-2020 12:03:01 INFO [LoginwithInvalidId]: Clicked on the Next Button.
-10-08-2020 12:03:04 INFO [LoginwithInvalidId]: Entered an invalid password.
-10-08-2020 12:03:04 INFO [LoginwithInvalidId]: Clicked on the log in Button.
-10-08-2020 12:03:04 INFO [LoginwithInvalidId]: already insered , it should be updated
-10-08-2020 12:03:09 INFO [LoginwithInvalidId]: Started the automated function  : Test_LoginWithInvalidUrl
-10-08-2020 12:03:16 INFO [LoginwithInvalidId]: Entered an invalid URL.
-10-08-2020 12:03:33 INFO [LoginwithInvalidId]: Entered a valid URL.
-10-08-2020 12:03:34 INFO [LoginwithInvalidId]: Entered a valid Email Address.
-10-08-2020 12:03:39 INFO [LoginwithInvalidId]: Clicked on the Next Button.
+11-08-2020 08:31:26 INFO [LoginwithInvalidId]: Entered setup process.
+11-08-2020 08:31:50 INFO [LoginwithInvalidId]: Setup process ended.
+11-08-2020 08:31:54 INFO [LoginwithInvalidId]: Started the automated function  : Test_LoginwithInvalidId
+11-08-2020 08:32:06 INFO [LoginwithInvalidId]: Entered a valid URL.
+11-08-2020 08:32:07 INFO [LoginwithInvalidId]: Entered an invalid Email Address.
+11-08-2020 08:32:07 INFO [LoginwithInvalidId]: Clicked on the Next Button.
+11-08-2020 08:32:19 INFO [LoginwithInvalidId]: Started the automated function  : Test_LoginWithInvalidPassword
+11-08-2020 08:32:35 INFO [LoginwithInvalidId]: Entered a valid URL.
+11-08-2020 08:32:35 INFO [LoginwithInvalidId]: Entered a valid Email Address.
+11-08-2020 08:32:35 INFO [LoginwithInvalidId]: Clicked on the Next Button.
+11-08-2020 08:32:48 INFO [LoginwithInvalidId]: Entered an invalid password.
+11-08-2020 08:32:48 INFO [LoginwithInvalidId]: Clicked on the log in Button.
+11-08-2020 08:32:48 INFO [LoginwithInvalidId]: already insered , it should be updated
+11-08-2020 08:32:55 INFO [LoginwithInvalidId]: Started the automated function  : Test_LoginWithInvalidUrl
+11-08-2020 08:33:07 INFO [LoginwithInvalidId]: Entered an invalid URL.
+11-08-2020 08:33:22 INFO [LoginwithInvalidId]: Entered a valid URL.
+11-08-2020 08:33:22 INFO [LoginwithInvalidId]: Entered a valid Email Address.
+11-08-2020 08:33:22 INFO [LoginwithInvalidId]: Clicked on the Next Button.

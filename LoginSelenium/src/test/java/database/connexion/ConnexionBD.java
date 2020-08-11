@@ -1,4 +1,4 @@
-package database.connexion;
+package test.java.database.connexion;
 
 /*
  * To change this license header, choose License Headers in Project Properties.

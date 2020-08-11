@@ -1,4 +1,4 @@
-package Login.Suite;
+package test.java.Login.Suite;
 
 import org.apache.log4j.Logger;
 import org.junit.AfterClass;
@@ -15,10 +15,10 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import org.w3c.dom.Node;
-import org.w3c.tidy.Tidy;
 
-import database.connexion.ConnexionBD;
+
+import test.java.database.connexion.ConnexionBD;
+
 
 import java.io.BufferedInputStream;
 import java.io.IOException;
@@ -38,7 +38,7 @@ import javax.xml.xpath.XPathFactory;
 
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
-public class LoginWithInvalidPassword {
+public class LoginWithInvalidPasswordTest {
 	
 	public static WebDriver driver ;
     public String url = "https://www.lambdatest.com/";
@@ -55,12 +55,12 @@ public class LoginWithInvalidPassword {
     
     
     
-    public LoginWithInvalidPassword() {
+    public LoginWithInvalidPasswordTest() {
     	  con = ConnexionBD.getInstance().getCnx();
 		// TODO Auto-generated constructor stub
 	}
 
-	static Logger log = Logger.getLogger(LoginwithInvalidId.class.getName());
+	static Logger log = Logger.getLogger(LoginwithInvalidIdTest.class.getName());
     @Rule public TestName name = new TestName();
 
 	

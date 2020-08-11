@@ -1,4 +1,4 @@
-package test.java;
+package test.java.Login.Suite;
 
 import java.net.URL;
 import java.sql.Connection;
@@ -25,11 +25,13 @@ import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import database.connexion.ConnexionBD;
+import test.java.database.connexion.ConnexionBD;
 
 
 
-public class LoginwithInvalidId {
+
+
+public class LoginwithInvalidIdTest {
 	private static WebDriver driver;
     public String url = "https://www.lambdatest.com/";
     public static final String  username= "ines.zaier";
@@ -47,11 +49,11 @@ public class LoginwithInvalidId {
     
     
     
-    public LoginwithInvalidId() {
+    public LoginwithInvalidIdTest() {
         con = ConnexionBD.getInstance().getCnx();
 	}
 
-	static Logger log = Logger.getLogger(LoginwithInvalidId.class.getName());
+	static Logger log = Logger.getLogger(LoginwithInvalidIdTest.class.getName());
     @Rule public TestName name = new TestName();
     @Test
    public void Test_LoginwithInvalidId () throws InterruptedException {
@@ -86,6 +88,10 @@ public class LoginwithInvalidId {
 		    xpath ="//div[@class='o6cuMc']";
  
             String expectedErrorMsg = "Couldn't find your Google Account";
+            if(IsExisting(nom))
+            {Update(nom, xpath , status);}
+            else
+            Add(nom, xpath , status); 
             WebElement exp = driver.findElement(By.xpath(xpath));
             log.info("search for xpath " +xpath);   
 
@@ -93,7 +99,6 @@ public class LoginwithInvalidId {
  		//  Assert.assertEquals(actualErrorMsg, expectedErrorMsg);
     
             if (actualErrorMsg.equalsIgnoreCase(expectedErrorMsg)) {
-            	
                 System.out.println("Test passed ," + actualErrorMsg);
                 status = true; //Lambda status will be reflected as passed
                 if(IsExisting(nom))

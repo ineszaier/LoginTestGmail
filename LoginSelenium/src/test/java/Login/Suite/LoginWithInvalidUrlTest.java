@@ -1,4 +1,4 @@
-package test.java;
+package test.java.Login.Suite;
 
 import java.net.URL;
 import java.sql.Connection;
@@ -22,7 +22,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 
-public class LoginWithInvalidUrl {
+public class LoginWithInvalidUrlTest {
 	public static WebDriver driver;
     public String url = "https://www.lambdatest.com/";
     public static final String  username= "ines.zaier";
@@ -36,7 +36,7 @@ public class LoginWithInvalidUrl {
     private PreparedStatement pste;
     private  ResultSet rs;
     
-    static Logger log = Logger.getLogger(LoginwithInvalidId.class.getName());
+    static Logger log = Logger.getLogger(LoginwithInvalidIdTest.class.getName());
     @Rule public TestName name = new TestName();
    
     @Test
@@ -97,11 +97,11 @@ public class LoginWithInvalidUrl {
             log.info("fonction automatique "+ nom_func+" et xpath enregistrés dans la bd " +xpath);   
             //To change body of generated methods, choose Tools | Templates.
         } catch (SQLException ex) {
-            Logger.getLogger(LoginwithValidCridentials.class.getName()).log(null, ex);
+            Logger.getLogger(LoginwithValidCridentialsTest.class.getName()).log(null, ex);
         }
       }
     	}catch (SQLException ex) {
-            Logger.getLogger(LoginwithValidCridentials.class.getName()).log(null, ex);
+            Logger.getLogger(LoginwithValidCridentialsTest.class.getName()).log(null, ex);
         }
     }
     
@@ -142,7 +142,7 @@ public class LoginWithInvalidUrl {
     @AfterClass
     public static void tearDown() throws Exception {
     	 if (driver != null) {
-    	 ((JavascriptExecutor) driver).executeScript("lambda-status=" + status);
+    	// ((JavascriptExecutor) driver).executeScript("lambda-status=" + status);
     	 driver.quit();
     	 }
     	 }

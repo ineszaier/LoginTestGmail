@@ -1,5 +1,8 @@
-package Login.Suite;
-
+package test.java.Login.Suite;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.concurrent.TimeUnit;
+import java.util.logging.Level;
 import java.net.URL;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -8,12 +11,13 @@ import java.sql.SQLException;
 import java.sql.Statement;
 
 import org.apache.log4j.Logger;
-import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Assert;
+import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Rule;
 import org.junit.Test;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.rules.TestName;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
@@ -24,18 +28,19 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-
-import database.connexion.ConnexionBD;
-
+import test.java.database.connexion.ConnexionBD;
 
 
-public class LoginwithInvalidId {
-	private static WebDriver driver;
+
+
+public class LoginwithValidCridentialsTest {
+	public static WebDriver driver ;
     public String url = "https://www.lambdatest.com/";
     public static final String  username= "ines.zaier";
     public static final String auth_key = "rLaLDZMzRJiu6nTBkvscHJhVWze745q3djP9scdPXcdmvVFM1t";
     public static final String URL = "@hub.lambdatest.com/wd/hub";
-    private static boolean status = false;
+    static boolean status = false;
+    
     private String xpath;
     private String nom ;
     
@@ -43,36 +48,32 @@ public class LoginwithInvalidId {
     private Statement ste;
     private PreparedStatement pste;
     private  ResultSet rs;
+
     
     
     
+    static Logger log = Logger.getLogger(LoginwithInvalidIdTest.class.getName());
+    @Rule public TestName name = new TestName();
     
-    public LoginwithInvalidId() {
-        con = ConnexionBD.getInstance().getCnx();
+    
+    
+    public LoginwithValidCridentialsTest() {
+    	 con = ConnexionBD.getInstance().getCnx();
+		// TODO Auto-generated constructor stub
 	}
 
-	static Logger log = Logger.getLogger(LoginwithInvalidId.class.getName());
-    @Rule public TestName name = new TestName();
-    @Test
-   public void Test_LoginwithInvalidId () throws InterruptedException {
-	      nom =  name.getMethodName();
 
-        log.info("Started the automated function  : "+nom);
+	@Test
+    public void Test_LoginwithValidCridentials () {
+    
+    	  driver.manage().window().maximize();
+    	   driver.get("http://www.gmail.com/");	
+    	   log.info("Entered a valid URL.");
 
-        // TODO Auto-generated method stub
-		driver.manage().window().maximize();
-
-		driver.get("http://www.gmail.com/");	
-
-	    	   log.info("Entered a valid URL.");
-
- 
            WebElement login = driver.findElement(By.id("identifierId") );
-       
-     
-		   login.sendKeys("ines.zaier@esprrrit.tn");
-		   log.info("Entered an invalid Email Address.");
-		
+		        
+		   login.sendKeys("ines.zaier@esprit.tn");
+		   log.info("Entered a valid Email Address.");
 
           
           
@@ -80,75 +81,71 @@ public class LoginwithInvalidId {
 		    
 		   loginNext.click();
 		   log.info("Clicked on the Next Button.");   
-	     
-		   Thread.sleep(5000);
+   
+             xpath ="//input[@name='password']";
+             if(IsExisting(nom))
+             {Update(nom, xpath , status);}
+             else
+             Add(nom, xpath , status); 
+    		new WebDriverWait(driver, 10).until(ExpectedConditions.elementToBeClickable(By.xpath(xpath))).sendKeys("183JFT0875");
+			   log.info("Entered a valid password.");
 
-		    xpath ="//div[@class='o6cuMc']";
- 
-            String expectedErrorMsg = "Couldn't find your Google Account";
-            WebElement exp = driver.findElement(By.xpath(xpath));
+    		driver.findElement(By.id("passwordNext")).click();
+ 		   log.info("Clicked on the Login Button.");   
+
+    		
+    		 nom =  name.getMethodName();
+            log.info("la fonction autamatique  : "+nom);
             log.info("search for xpath " +xpath);   
 
-            String actualErrorMsg = exp.getText();
- 		//  Assert.assertEquals(actualErrorMsg, expectedErrorMsg);
-    
-            if (actualErrorMsg.equalsIgnoreCase(expectedErrorMsg)) {
-            	
-                System.out.println("Test passed ," + actualErrorMsg);
+            String at = driver.getTitle();
+    		String et = "gmail";
+    		
+            if (at.equalsIgnoreCase(et)) {
+                System.out.println("Test passed , logged in");
                 status = true; //Lambda status will be reflected as passed
-                if(IsExisting(nom))
-                {Update(nom, xpath , status);}
-                else
-                Add(nom, xpath , status); 
-              } else {
-                
-
-                System.out.println("Test failed");
+                System.out.println(IsExisting(nom) + "1");
                 if(IsExisting(nom))
                 {Update(nom, xpath , status);}
                 else
                 Add(nom, xpath , status);
-               //Lambda status will be reflected as passed
-              
- 
+               
+
+              } else {
+                System.out.println("Test failed"); //Lambda status will be reflected as passed
+                System.out.println(IsExisting(nom) + "2");
+                if(IsExisting(nom).equals("true"))
+                {Update(nom, xpath , status);}
+                else
+                Add(nom, xpath , status);
             }
+      
  
  
     }
+    
    
     @BeforeClass
     public static void setUp() {
-    	 try {
-    	log.info("Entered setup process.");
-
-     /*   DesiredCapabilities capabilities = new DesiredCapabilities();
-        capabilities.setCapability("browserName", "chrome");
-        capabilities.setCapability("version", "72.0");
-        capabilities.setCapability("platform", "win8"); // If this cap isn't specified, it will just get the any available one
-        capabilities.setCapability("build", "TestNG_login_1");
-        capabilities.setCapability("name", "TestNG_login_1");
-        capabilities.setCapability("network", true); // To enable network logs
-        capabilities.setCapability("visual", true); // To enable step by step screenshot
-        capabilities.setCapability("video", true); // To enable video recording
-        capabilities.setCapability("console", true); // To capture console logs
-      */ 
-        System.setProperty("webdriver.chrome.driver", "C:\\Users\\lenovoo\\Desktop\\slenim\\chromedriver_win32\\chromedriver.exe");
-		driver=new ChromeDriver();
-         //   driver = new RemoteWebDriver(new URL("https://" + username + ":" + auth_key + URL), capabilities);
-	    	   log.info("Setup process ended.");
-
+      
+        try {
+        	 System.setProperty("webdriver.chrome.driver", "C:\\Users\\lenovoo\\Desktop\\slenim\\chromedriver_win32\\chromedriver.exe");
+     		driver=new ChromeDriver();
+            //driver = new RemoteWebDriver(new URL("https://" + username + ":" + auth_key + URL), capabilities);
+ 
         } catch (Exception e) {
  
             System.out.println("Invalid grid URL" + e.getMessage());
         }
  
     }
-  
     @AfterClass
     public static void tearDown() throws Exception {
-    	
+    	 if (driver != null) {
+    	 ((JavascriptExecutor) driver).executeScript("lambda-status=" + status);
     	 driver.quit();
-    }
+    	 }
+    	 }
     
     public Boolean IsExisting(String nom_func ) {
     	String sql1 ="SELECT * from functions WHERE function_name =?";
@@ -221,4 +218,25 @@ public void Add(String nom_func , String xpath , boolean status )   {
 	}
     
     }
+public List<String> getAllFunctionsOfXpath(String xpath){
+        
+        List<String> Functions = new ArrayList<String>() ;
+        String req = "select * from functions where xpath = ?";
+        try {
+           pste = con.prepareStatement(req);
+             ResultSet resultSet = pste.executeQuery();
+           while (resultSet.next()) {
+        	   String nom = new String(resultSet.getString(1));
+              
+              
+               Functions.add(nom);
+           
+           }
+        } catch (Exception ex) {
+            System.out.println("Prob query !!!");
+            System.out.println( ex.getMessage());
+            ex.printStackTrace();
+        }
+        return Functions;
+    }  
 }
