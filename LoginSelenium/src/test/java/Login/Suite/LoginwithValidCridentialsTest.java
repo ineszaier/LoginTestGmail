@@ -11,6 +11,7 @@ import java.sql.SQLException;
 import java.sql.Statement;
 
 import org.apache.log4j.Logger;
+import org.apache.log4j.xml.DOMConfigurator;
 import org.junit.AfterClass;
 import org.junit.Assert;
 import org.junit.Before;
@@ -65,7 +66,8 @@ public class LoginwithValidCridentialsTest {
 
 	@Test
     public void Test_LoginwithValidCridentials () {
-    
+		 nom =  name.getMethodName();
+         log.info("la fonction autamatique  : "+nom);
     	  driver.manage().window().maximize();
     	   driver.get("http://www.gmail.com/");	
     	   log.info("Entered a valid URL.");
@@ -94,8 +96,7 @@ public class LoginwithValidCridentialsTest {
  		   log.info("Clicked on the Login Button.");   
 
     		
-    		 nom =  name.getMethodName();
-            log.info("la fonction autamatique  : "+nom);
+    		
             log.info("search for xpath " +xpath);   
 
             String at = driver.getTitle();
@@ -129,6 +130,8 @@ public class LoginwithValidCridentialsTest {
     public static void setUp() {
       
         try {
+            DOMConfigurator.configure("log4j.xml");
+
         	 System.setProperty("webdriver.chrome.driver", "C:\\Users\\lenovoo\\Desktop\\slenim\\chromedriver_win32\\chromedriver.exe");
      		driver=new ChromeDriver();
             //driver = new RemoteWebDriver(new URL("https://" + username + ":" + auth_key + URL), capabilities);
@@ -142,7 +145,7 @@ public class LoginwithValidCridentialsTest {
     @AfterClass
     public static void tearDown() throws Exception {
     	 if (driver != null) {
-    	 ((JavascriptExecutor) driver).executeScript("lambda-status=" + status);
+    	// ((JavascriptExecutor) driver).executeScript("lambda-status=" + status);
     	 driver.quit();
     	 }
     	 }
@@ -184,10 +187,7 @@ public void Add(String nom_func , String xpath , boolean status )   {
 			     pste.setString(1,nom_func);
 		            pste.setString(2,xpath);
 		            pste.setBoolean(3,status);
-		    
-
-		            
-		            pste.executeUpdate();
+		    pste.executeUpdate();
 		            log.info("fonction automatique "+ nom_func+" et xpath enregistrés dans la bd " +xpath);   
 		            //To change body of generated methods, choose Tools | Templates.
 			} catch (SQLException e) {

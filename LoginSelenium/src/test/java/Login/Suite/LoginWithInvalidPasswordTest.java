@@ -1,6 +1,7 @@
 package test.java.Login.Suite;
 
 import org.apache.log4j.Logger;
+import org.apache.log4j.xml.DOMConfigurator;
 import org.junit.AfterClass;
 import org.junit.Assert;
 import org.junit.Before;
@@ -147,6 +148,8 @@ public class LoginWithInvalidPasswordTest {
 	    public static void setUp() {
 	   
 	        try {
+	               DOMConfigurator.configure("log4j.xml");
+
 	        	 System.setProperty("webdriver.chrome.driver", "C:\\Users\\lenovoo\\Desktop\\slenim\\chromedriver_win32\\chromedriver.exe");
 	     		driver=new ChromeDriver();
 	            //driver = new RemoteWebDriver(new URL("https://" + username + ":" + auth_key + URL), capabilities);
@@ -160,7 +163,7 @@ public class LoginWithInvalidPasswordTest {
 	    @AfterClass
 	    public static void tearDown() throws Exception {
 	    	 if (driver != null) {
-	    	 ((JavascriptExecutor) driver).executeScript("lambda-status=" + status);
+	    	// ((JavascriptExecutor) driver).executeScript("lambda-status=" + status);
 	    	 driver.quit();
 	    	 }
 	    	 }

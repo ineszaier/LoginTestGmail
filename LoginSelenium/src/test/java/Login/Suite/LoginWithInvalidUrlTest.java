@@ -8,6 +8,7 @@ import java.sql.SQLException;
 import java.sql.Statement;
 
 import org.apache.log4j.Logger;
+import org.apache.log4j.xml.DOMConfigurator;
 import org.junit.AfterClass;
 import org.junit.Assert;
 import org.junit.BeforeClass;
@@ -129,6 +130,8 @@ public class LoginWithInvalidUrlTest {
     public static void setUp() {
     
         try {
+            DOMConfigurator.configure("log4j.xml");
+
         	 System.setProperty("webdriver.chrome.driver", "C:\\Users\\lenovoo\\Desktop\\slenim\\chromedriver_win32\\chromedriver.exe");
      		driver=new ChromeDriver();
             //driver = new RemoteWebDriver(new URL("https://" + username + ":" + auth_key + URL), capabilities);

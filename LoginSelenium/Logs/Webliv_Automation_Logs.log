@@ -1,18 +1,9 @@
-11-08-2020 08:31:26 INFO [LoginwithInvalidId]: Entered setup process.
-11-08-2020 08:31:50 INFO [LoginwithInvalidId]: Setup process ended.
-11-08-2020 08:31:54 INFO [LoginwithInvalidId]: Started the automated function  : Test_LoginwithInvalidId
-11-08-2020 08:32:06 INFO [LoginwithInvalidId]: Entered a valid URL.
-11-08-2020 08:32:07 INFO [LoginwithInvalidId]: Entered an invalid Email Address.
-11-08-2020 08:32:07 INFO [LoginwithInvalidId]: Clicked on the Next Button.
-11-08-2020 08:32:19 INFO [LoginwithInvalidId]: Started the automated function  : Test_LoginWithInvalidPassword
-11-08-2020 08:32:35 INFO [LoginwithInvalidId]: Entered a valid URL.
-11-08-2020 08:32:35 INFO [LoginwithInvalidId]: Entered a valid Email Address.
-11-08-2020 08:32:35 INFO [LoginwithInvalidId]: Clicked on the Next Button.
-11-08-2020 08:32:48 INFO [LoginwithInvalidId]: Entered an invalid password.
-11-08-2020 08:32:48 INFO [LoginwithInvalidId]: Clicked on the log in Button.
-11-08-2020 08:32:48 INFO [LoginwithInvalidId]: already insered , it should be updated
-11-08-2020 08:32:55 INFO [LoginwithInvalidId]: Started the automated function  : Test_LoginWithInvalidUrl
-11-08-2020 08:33:07 INFO [LoginwithInvalidId]: Entered an invalid URL.
-11-08-2020 08:33:22 INFO [LoginwithInvalidId]: Entered a valid URL.
-11-08-2020 08:33:22 INFO [LoginwithInvalidId]: Entered a valid Email Address.
-11-08-2020 08:33:22 INFO [LoginwithInvalidId]: Clicked on the Next Button.
+11-08-2020 10:13:32 INFO [LoginwithInvalidIdTest]: Entered setup process.
+11-08-2020 10:13:36 INFO [LoginwithInvalidIdTest]: Setup process ended.
+11-08-2020 10:13:37 INFO [LoginwithInvalidIdTest]: Started the automated function  : Test_LoginwithInvalidId
+11-08-2020 10:13:59 INFO [LoginwithInvalidIdTest]: Entered a valid URL.
+11-08-2020 10:14:04 INFO [LoginwithInvalidIdTest]: Started the automated function  : Test_LoginWithInvalidPassword
+11-08-2020 10:14:28 INFO [LoginwithInvalidIdTest]: Entered a valid URL.
+11-08-2020 10:14:31 INFO [LoginwithInvalidIdTest]: Started the automated function  : Test_LoginWithInvalidUrl
+11-08-2020 10:14:45 INFO [LoginwithInvalidIdTest]: Entered an invalid URL.
+11-08-2020 10:15:14 INFO [LoginwithInvalidIdTest]: Entered a valid URL.
