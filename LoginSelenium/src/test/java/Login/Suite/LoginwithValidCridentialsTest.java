@@ -66,12 +66,12 @@ public class LoginwithValidCridentialsTest {
 
 	@Test
     public void Test_LoginwithValidCridentials () {
-		 nom =  name.getMethodName();
-         log.info("la fonction autamatique  : "+nom);
+		
     	  driver.manage().window().maximize();
     	   driver.get("http://www.gmail.com/");	
     	   log.info("Entered a valid URL.");
-
+    	   nom =  name.getMethodName();
+           log.info("la fonction autamatique  : "+nom);
            WebElement login = driver.findElement(By.id("identifierId") );
 		        
 		   login.sendKeys("ines.zaier@esprit.tn");
