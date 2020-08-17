@@ -242,7 +242,7 @@ public List<String> AfficherParXp(String xpath) {
    try {
        System.out.println("d5alt!");
     
-       String requete="select function_name from functions where Xpath like '"+xpath+"'";
+       String requete="select function_name from functions where Xpath like \""+xpath+"\"";
       
        pste = con.prepareStatement(requete);
       // pste.setString(1,xpath);
