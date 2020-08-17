@@ -105,7 +105,7 @@ public class LoginwithValidCridentialsTest {
             if (at.equalsIgnoreCase(et)) {
                 System.out.println("Test passed , logged in");
                 status = true; //Lambda status will be reflected as passed
-                System.out.println(IsExisting(nom) + "1");
+              
                 if(IsExisting(nom))
                 {Update(nom, xpath , status);}
                 else
@@ -114,7 +114,9 @@ public class LoginwithValidCridentialsTest {
 
               } else {
                 System.out.println("Test failed"); //Lambda status will be reflected as passed
-                System.out.println(IsExisting(nom) + "2");
+              
+                AfficherParXp(xpath);
+
                 if(IsExisting(nom).equals("true"))
                 {Update(nom, xpath , status);}
                 else
@@ -218,25 +220,29 @@ public void Add(String nom_func , String xpath , boolean status )   {
 	}
     
     }
-public List<String> getAllFunctionsOfXpath(String xpath){
-        
-        List<String> Functions = new ArrayList<String>() ;
-        String req = "select * from functions where xpath = ?";
-        try {
-           pste = con.prepareStatement(req);
-             ResultSet resultSet = pste.executeQuery();
-           while (resultSet.next()) {
-        	   String nom = new String(resultSet.getString(1));
-              
-              
-               Functions.add(nom);
-           
-           }
-        } catch (Exception ex) {
-            System.out.println("Prob query !!!");
-            System.out.println( ex.getMessage());
-            ex.printStackTrace();
-        }
-        return Functions;
-    }  
+
+public void AfficherParXp(String xpath) {
+    List<String> lp = new ArrayList<>();
+   try {
+       System.out.println("d5alt!");
+    
+       String requete="select function_name from functions where Xpath like \""+xpath+"\"";
+      
+       pste = con.prepareStatement(requete);
+      // pste.setString(1,xpath);
+      rs = pste.executeQuery();
+
+     while(rs.next()) {
+    	
+     lp.add(rs.getString("function_name"));
+     } 
+     
+   } catch (SQLException ex) {
+       Logger.getLogger(LoginwithInvalidIdTest.class.getName()).log(null, ex);
+   }
+   for(String elem: lp)
+   {
+   	 System.out.println (elem);
+   } //To change body of generated methods, choose Tools | Templates.
+}
 }

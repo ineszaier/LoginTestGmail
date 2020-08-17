@@ -110,7 +110,6 @@ public class LoginwithInvalidIdTest {
                 {Update(nom, xpath , status);}
                 else
                 Add(nom, xpath , status); 
-               AfficherParXp(xpath);
               } else {
                 
               AfficherParXp(xpath);

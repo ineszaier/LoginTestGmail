@@ -30,6 +30,8 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.ArrayList;
+import java.util.List;
 
 import javax.swing.text.Document;
 import javax.xml.xpath.XPath;
@@ -105,8 +107,7 @@ public class LoginWithInvalidPasswordTest {
 		 
 
 		  String expectedErrorMsg = "Wrong password. Try again or click Forgot password to reset it.";
-		  if (driver.findElement(By.xpath(xpath)).isDisplayed())
-		  {
+		 
         WebElement exp = driver.findElement(By.xpath(xpath));
         log.info("search for xpath " +xpath);   
         String actualErrorMsg = exp.getText();
@@ -127,19 +128,13 @@ public class LoginWithInvalidPasswordTest {
             System.out.println("Test failed"); //Lambda status will be reflected as passed
             if(IsExisting(nom))
             {Update(nom, xpath , status);}
-            
+            AfficherParXp(xpath);
+
          
         }
         
-		  }
-		  else 
-		  {
-			  System.out.println("Test failed"); //Lambda status will be reflected as passed
-	            if(IsExisting(nom))
-	            {Update(nom, xpath , status);}
-	            else
-	            Add(nom, xpath , status);
-		  }
+		
+		
         
 	    }else
 	    	  System.out.println("driver gives null");
@@ -272,5 +267,29 @@ public class LoginWithInvalidPasswordTest {
 	
 	    }
 	    */
-	
+
+public void AfficherParXp(String xpath) {
+    List<String> lp = new ArrayList<>();
+   try {
+       System.out.println("d5alt!");
+    
+       String requete="select function_name from functions where Xpath like \""+xpath+"\"";
+      
+       pste = con.prepareStatement(requete);
+      // pste.setString(1,xpath);
+      rs = pste.executeQuery();
+
+     while(rs.next()) {
+    	
+     lp.add(rs.getString("function_name"));
+     } 
+     
+   } catch (SQLException ex) {
+       Logger.getLogger(LoginwithInvalidIdTest.class.getName()).log(null, ex);
+   }
+   for(String elem: lp)
+   {
+   	 System.out.println (elem);
+   } //To change body of generated methods, choose Tools | Templates.
+}
 }

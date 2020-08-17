@@ -1,8 +1,10 @@
-17-08-2020 14:16:23 INFO [LoginwithInvalidIdTest]: Setup process ended.
-17-08-2020 14:16:23 INFO [LoginwithInvalidIdTest]: Started the automated function  : Test_LoginwithInvalidId
-17-08-2020 14:16:30 INFO [LoginwithInvalidIdTest]: Entered a valid URL.
-17-08-2020 14:16:30 INFO [LoginwithInvalidIdTest]: Entered an invalid Email Address.
-17-08-2020 14:16:30 INFO [LoginwithInvalidIdTest]: Clicked on the Next Button.
-17-08-2020 14:16:35 INFO [LoginwithInvalidIdTest]: already insered , it should be updated
-17-08-2020 14:16:35 INFO [LoginwithInvalidIdTest]: search for xpath //div[@class='o6cuMc']
-17-08-2020 14:16:35 INFO [LoginwithInvalidIdTest]: already insered , it should be updated
+17-08-2020 15:04:51 INFO [LoginwithInvalidIdTest]: Entered a valid URL.
+17-08-2020 15:04:51 INFO [LoginwithInvalidIdTest]: la fonction autamatique  : Test_LoginwithValidCridentials
+17-08-2020 15:04:52 INFO [LoginwithInvalidIdTest]: Entered a valid Email Address.
+17-08-2020 15:04:52 INFO [LoginwithInvalidIdTest]: Clicked on the Next Button.
+17-08-2020 15:04:52 INFO [LoginwithInvalidIdTest]: already insered , it should be updated
+17-08-2020 15:04:53 INFO [LoginwithInvalidIdTest]: Entered a valid password.
+17-08-2020 15:04:54 INFO [LoginwithInvalidIdTest]: Clicked on the Login Button.
+17-08-2020 15:04:54 INFO [LoginwithInvalidIdTest]: search for xpath //input[@name='password']
+17-08-2020 15:04:54 INFO [LoginwithInvalidIdTest]: already insered , it should be updated
+17-08-2020 15:04:54 INFO [LoginwithInvalidIdTest]: already insered , it should be updated
