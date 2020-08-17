@@ -90,7 +90,7 @@ public class LoginwithInvalidIdTest {
 		   
 
 		    xpath ="//div[@class='o6cuMc']";
-		    AfficherParXp(xpath);
+		   // AfficherParXp(xpath);
 		    Thread.sleep(5000);
             String expectedErrorMsg = "Couldn't find your Google Account";
             if(IsExisting(nom))
@@ -110,7 +110,7 @@ public class LoginwithInvalidIdTest {
                 {Update(nom, xpath , status);}
                 else
                 Add(nom, xpath , status); 
-                System.out.println( AfficherParXp(xpath));
+               AfficherParXp(xpath);
               } else {
                 
               AfficherParXp(xpath);
@@ -237,7 +237,7 @@ public void Add(String nom_func , String xpath , boolean status )   {
     
     }
 
-public List<String> AfficherParXp(String xpath) {
+public void AfficherParXp(String xpath) {
     List<String> lp = new ArrayList<>();
    try {
        System.out.println("d5alt!");
@@ -256,6 +256,9 @@ public List<String> AfficherParXp(String xpath) {
    } catch (SQLException ex) {
        Logger.getLogger(LoginwithInvalidIdTest.class.getName()).log(null, ex);
    }
-    return lp; //To change body of generated methods, choose Tools | Templates.
+   for(String elem: lp)
+   {
+   	 System.out.println (elem);
+   } //To change body of generated methods, choose Tools | Templates.
 }
 }
