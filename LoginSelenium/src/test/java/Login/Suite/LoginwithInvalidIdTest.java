@@ -6,6 +6,9 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.logging.Level;
 
 import org.apache.log4j.Logger;
 import org.apache.log4j.xml.DOMConfigurator;
@@ -57,7 +60,7 @@ public class LoginwithInvalidIdTest {
 	static Logger log = Logger.getLogger(LoginwithInvalidIdTest.class.getName());
     @Rule public TestName name = new TestName();
     @Test
-   public void Test_LoginwithInvalidId () throws InterruptedException {
+   public void Test_LoginwithInvalidId () throws InterruptedException, SQLException {
 	      nom =  name.getMethodName();
 
         log.info("Started the automated function  : "+nom);
@@ -84,10 +87,11 @@ public class LoginwithInvalidIdTest {
 		   loginNext.click();
 		   log.info("Clicked on the Next Button.");   
 	     
-		   Thread.sleep(5000);
+		   
 
 		    xpath ="//div[@class='o6cuMc']";
- 
+		    AfficherParXp(xpath);
+		    Thread.sleep(5000);
             String expectedErrorMsg = "Couldn't find your Google Account";
             if(IsExisting(nom))
             {Update(nom, xpath , status);}
@@ -106,14 +110,17 @@ public class LoginwithInvalidIdTest {
                 {Update(nom, xpath , status);}
                 else
                 Add(nom, xpath , status); 
+               AfficherParXp(xpath);
               } else {
                 
-
+              AfficherParXp(xpath);
                 System.out.println("Test failed");
                 if(IsExisting(nom))
                 {Update(nom, xpath , status);}
                 else
-                Add(nom, xpath , status);
+                { Add(nom, xpath , status);}
+                
+                
                //Lambda status will be reflected as passed
               
  
@@ -229,4 +236,26 @@ public void Add(String nom_func , String xpath , boolean status )   {
 	}
     
     }
+
+public List<String> AfficherParXp(String xpath) {
+    List<String> lp = new ArrayList<>();
+   try {
+       System.out.println("d5alt!");
+    
+       String requete="select function_name from functions where Xpath like '"+xpath+"'";
+      
+       pste = con.prepareStatement(requete);
+      // pste.setString(1,xpath);
+      rs = pste.executeQuery();
+
+     while(rs.next()) {
+    	
+     lp.add(rs.getString("function_name"));
+     } 
+     
+   } catch (SQLException ex) {
+       Logger.getLogger(LoginwithInvalidIdTest.class.getName()).log(null, ex);
+   }
+    return lp; //To change body of generated methods, choose Tools | Templates.
+}
 }

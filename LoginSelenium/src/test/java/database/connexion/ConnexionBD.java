@@ -24,7 +24,9 @@ public class ConnexionBD {
     private ConnexionBD() {
   
         try {
+
             cnx=DriverManager.getConnection(url, login, pwd );
+            System.out.println("Connected to database succesfully");
         } catch (SQLException ex) {
             Logger.getLogger(ConnexionBD.class.getName()).log(Level.SEVERE, null, ex);
         }
