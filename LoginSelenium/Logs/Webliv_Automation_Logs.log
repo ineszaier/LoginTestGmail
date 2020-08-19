@@ -1,7 +1,7 @@
-19-08-2020 10:52:32 INFO [LoginwithInvalidIdTest]: Started the automated function  : Test_LoginWithInvalidPassword
-19-08-2020 10:52:37 INFO [LoginwithInvalidIdTest]: Entered a valid URL.
-19-08-2020 10:52:37 INFO [LoginwithInvalidIdTest]: Entered a valid Email Address.
-19-08-2020 10:52:38 INFO [LoginwithInvalidIdTest]: Clicked on the Next Button.
-19-08-2020 10:52:40 INFO [LoginwithInvalidIdTest]: Entered an invalid password.
-19-08-2020 10:52:40 INFO [LoginwithInvalidIdTest]: Clicked on the log in Button.
-19-08-2020 10:52:40 INFO [LoginwithInvalidIdTest]: already insered , it should be updated
+19-08-2020 14:59:01 INFO [LoginwithInvalidIdTest]: Started the automated function  : Test_LoginWithInvalidPassword
+19-08-2020 14:59:10 INFO [LoginwithInvalidIdTest]: Entered a valid URL.
+19-08-2020 14:59:11 INFO [LoginwithInvalidIdTest]: Entered a valid Email Address.
+19-08-2020 14:59:11 INFO [LoginwithInvalidIdTest]: Clicked on the Next Button.
+19-08-2020 14:59:13 INFO [LoginwithInvalidIdTest]: Entered an invalid password.
+19-08-2020 14:59:13 INFO [LoginwithInvalidIdTest]: Clicked on the log in Button.
+19-08-2020 14:59:13 INFO [LoginwithInvalidIdTest]: already insered , it should be updated

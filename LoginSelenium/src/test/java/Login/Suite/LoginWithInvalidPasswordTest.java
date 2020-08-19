@@ -105,7 +105,7 @@ public class LoginWithInvalidPasswordTest {
                {Update(nom, xpath , status);}
                else
                {Add(nom, xpath , status); }
-			  // Thread.sleep(5000);
+			   Thread.sleep(5000);
 		 // String cureent = driver.getCurrentUrl().toString() ;
 		//  System.out.println("i'm here ," + cureent);
 		
@@ -115,8 +115,8 @@ public class LoginWithInvalidPasswordTest {
 	
 		  log.info("search for xpath " +xpath); 
 		
-		  WebDriverWait wait = new WebDriverWait(driver, 60);
-	  wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(xpath)));
+		  //WebDriverWait wait = new WebDriverWait(driver, 60);
+	//  wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(xpath)));
    
 		  exp = driver.findElement(By.xpath(xpath));
 			
