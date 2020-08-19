@@ -119,7 +119,12 @@ public class LoginWithInvalidPasswordTest {
 	//	if(  wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath(xpath)))) {
      try {
 		  exp = driver.findElement(By.xpath(xpath));
-			actualErrorMsg = exp.getText();
+			
+     }
+     catch(NoSuchElementException u)
+     {
+    	 System.out.println("exception handled");
+    	 actualErrorMsg = exp.getText();
 			
 			if (actualErrorMsg.equalsIgnoreCase(expectedErrorMsg)){
 			            System.out.println("Test passed ," + actualErrorMsg);
@@ -137,10 +142,6 @@ public class LoginWithInvalidPasswordTest {
 
 			         
 			        }
-     }
-     catch(NoSuchElementException u)
-     {
-    	 System.out.println("exception handled");
      }
 		 
 	
