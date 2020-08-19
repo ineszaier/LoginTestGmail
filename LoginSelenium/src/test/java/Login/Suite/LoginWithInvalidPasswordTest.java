@@ -123,9 +123,9 @@ public class LoginWithInvalidPasswordTest {
 	   System.out.println("exception handled");
    }
 
-     actualErrorMsg = "https://accounts.google.com/signin/v2/challenge/pwd?service=mail&passive=true&rm=false&continue=https%3A%2F%2Fmail.google.com%2Fmail%2F&ss=1&scc=1&ltmpl=default&ltmplcache=2&emr=1&osid=1&flowName=GlifWebSignIn&flowEntry=ServiceLogin&cid=1&navigationDirection=forward&TL=AM3QAYaT9Aw2f0UWODH9Q7CTEIsZTSgEIoXYHGmqk2pF0DgMghtv9Rb6SA1oAYpL\n" ;
+     actualErrorMsg = "https://accounts.google.com/signin/v2/challenge/pwd?service=mail&passive=true&rm=false&continue=https%3A%2F%2Fmail.google.com%2Fmail%2F&ss=1&scc=1&ltmpl=default&ltmplcache=2&emr=1&osid=1&flowName=GlifWebSignIn&flowEntry=ServiceLogin&cid=1&navigationDirection=forward" ;
 		
-		if (actualErrorMsg.equalsIgnoreCase(expectedErrorMsg)  ){
+		if (cureent.contains(actualErrorMsg)  ){
 		            System.out.println("Test passed ," + actualErrorMsg);
 		            status = true; //Lambda status will be reflected as passed
 		            
