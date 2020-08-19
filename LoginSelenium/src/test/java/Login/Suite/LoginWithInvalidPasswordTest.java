@@ -115,15 +115,15 @@ public class LoginWithInvalidPasswordTest {
 	
 		  log.info("search for xpath " +xpath); 
 		
-		  //WebDriverWait wait = new WebDriverWait(driver, 60);
-	//  wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(xpath)));
+		  WebDriverWait wait = new WebDriverWait(driver, 30);
+	  wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(xpath)));
    
 		  exp = driver.findElement(By.xpath(xpath));
 			
 
      actualErrorMsg = exp.getText();
 		
-		if (actualErrorMsg.equalsIgnoreCase(expectedErrorMsg)){
+		if (actualErrorMsg.equalsIgnoreCase(expectedErrorMsg) && exp.isDisplayed() ){
 		            System.out.println("Test passed ," + actualErrorMsg);
 		            status = true; //Lambda status will be reflected as passed
 		            
