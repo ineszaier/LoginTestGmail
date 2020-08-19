@@ -115,8 +115,8 @@ public class LoginWithInvalidPasswordTest {
 	
 		  log.info("search for xpath " +xpath); 
 		
-		  WebDriverWait wait = new WebDriverWait(driver, 30);
-	  wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(xpath)));
+		//  WebDriverWait wait = new WebDriverWait(driver, 30);
+	//  wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(xpath)));
    
 		  exp = driver.findElement(By.xpath(xpath));
 			
