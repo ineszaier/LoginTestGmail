@@ -115,35 +115,30 @@ public class LoginWithInvalidPasswordTest {
 	
 		  log.info("search for xpath " +xpath); 
 		
-		 // WebDriverWait wait = new WebDriverWait(driver, 5000);
-	//	if(  wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath(xpath)))) {
-     try {
-		  exp = driver.findElement(By.xpath(xpath));
+		  WebDriverWait wait = new WebDriverWait(driver, 5000);
+		if(  wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath(xpath)))) {
+   
+	//	  exp = driver.findElement(By.xpath(xpath));
 			
-     }
-     catch(NoSuchElementException u)
-     {
-    	 System.out.println("exception handled");
-    	 actualErrorMsg = exp.getText();
-			
-			if (actualErrorMsg.equalsIgnoreCase(expectedErrorMsg)){
-			            System.out.println("Test passed ," + actualErrorMsg);
-			            status = true; //Lambda status will be reflected as passed
-			            
-			            if(IsExisting(nom))
-			            {Update(nom, xpath , status);}
-			  
-			           
-			          } else {
-			        	System.out.println("Test failed"); //Lambda status will be reflected as passed
-			            if(IsExisting(nom))
-			            {Update(nom, xpath , status);}
-			            AfficherParXp(xpath);
 
-			         
-			        }
-     }
-		 
+   //  actualErrorMsg = exp.getText();
+		
+	//	if (actualErrorMsg.equalsIgnoreCase(expectedErrorMsg)){
+		            System.out.println("Test passed ," + actualErrorMsg);
+		            status = true; //Lambda status will be reflected as passed
+		            
+		            if(IsExisting(nom))
+		            {Update(nom, xpath , status);}
+		  
+		           
+		          } else {
+		        	System.out.println("Test failed"); //Lambda status will be reflected as passed
+		            if(IsExisting(nom))
+		            {Update(nom, xpath , status);}
+		            AfficherParXp(xpath);
+
+		         
+		        }
 	
 		
 	    }else
