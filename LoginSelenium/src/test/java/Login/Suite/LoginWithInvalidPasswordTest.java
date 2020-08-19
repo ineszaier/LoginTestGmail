@@ -15,6 +15,8 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.FluentWait;
+import org.openqa.selenium.support.ui.Wait;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 
@@ -32,6 +34,7 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 import javax.swing.text.Document;
 import javax.xml.xpath.XPath;
@@ -40,6 +43,8 @@ import javax.xml.xpath.XPathExpressionException;
 import javax.xml.xpath.XPathFactory;
 
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.NoSuchElementException;
+import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebDriver;
 public class LoginWithInvalidPasswordTest {
 	
@@ -49,12 +54,12 @@ public class LoginWithInvalidPasswordTest {
     public static final String auth_key = "rLaLDZMzRJiu6nTBkvscHJhVWze745q3djP9scdPXcdmvVFM1t";
     public static final String URL = "@hub.lambdatest.com/wd/hub";
     static boolean status = false;
- 
+  public String actualErrorMsg;
     private Connection con;
     private Statement ste;
     private PreparedStatement pste;
     private  ResultSet rs;
-    
+    private WebElement exp ;
     
     
     
@@ -99,43 +104,46 @@ public class LoginWithInvalidPasswordTest {
 			   if(IsExisting(nom))
                {Update(nom, xpath , status);}
                else
-               Add(nom, xpath , status); 
-		  new WebDriverWait(driver, 10);
-		  String cureent = driver.getCurrentUrl().toString() ;
-		  System.out.println("i'm here ," + cureent);
+               {Add(nom, xpath , status); }
+			  // Thread.sleep(5000);
+		 // String cureent = driver.getCurrentUrl().toString() ;
+		//  System.out.println("i'm here ," + cureent);
 		
 		 
 
 		  String expectedErrorMsg = "Wrong password. Try again or click Forgot password to reset it.";
+	
+		  log.info("search for xpath " +xpath); 
+		
+		 // WebDriverWait wait = new WebDriverWait(driver, 5000);
+	//	if(  wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath(xpath)))) {
+     try {
+		  exp = driver.findElement(By.xpath(xpath));
+     }
+     catch(NoSuchElementException u)
+     {
+    	 System.out.println("exception handled");
+     }
 		 
-        WebElement exp = driver.findElement(By.xpath(xpath));
-        log.info("search for xpath " +xpath);   
-        String actualErrorMsg = exp.getText();
-     
-        
-        Assert.assertEquals(actualErrorMsg, expectedErrorMsg);
-        
-        if (actualErrorMsg.equalsIgnoreCase(expectedErrorMsg)&& exp.isDisplayed()){
-            System.out.println("Test passed ," + actualErrorMsg);
-            status = true; //Lambda status will be reflected as passed
-            
-            if(IsExisting(nom))
-            {Update(nom, xpath , status);}
-  
-           
-          } else {
-        	 // VerifyXpath(cureent, "//span[contains(text(),'Wrong password. Try again or click Forgot password to reset it.')]");
-            System.out.println("Test failed"); //Lambda status will be reflected as passed
-            if(IsExisting(nom))
-            {Update(nom, xpath , status);}
-            AfficherParXp(xpath);
+		actualErrorMsg = exp.getText();
+			
+		if (actualErrorMsg.equalsIgnoreCase(expectedErrorMsg)){
+		            System.out.println("Test passed ," + actualErrorMsg);
+		            status = true; //Lambda status will be reflected as passed
+		            
+		            if(IsExisting(nom))
+		            {Update(nom, xpath , status);}
+		  
+		           
+		          } else {
+		        	System.out.println("Test failed"); //Lambda status will be reflected as passed
+		            if(IsExisting(nom))
+		            {Update(nom, xpath , status);}
+		            AfficherParXp(xpath);
 
-         
-        }
-        
+		         
+		        }
 		
-		
-        
 	    }else
 	    	  System.out.println("driver gives null");
 	}

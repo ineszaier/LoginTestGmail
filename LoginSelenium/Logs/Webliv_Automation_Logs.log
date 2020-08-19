@@ -1,10 +1,7 @@
-17-08-2020 15:04:51 INFO [LoginwithInvalidIdTest]: Entered a valid URL.
-17-08-2020 15:04:51 INFO [LoginwithInvalidIdTest]: la fonction autamatique  : Test_LoginwithValidCridentials
-17-08-2020 15:04:52 INFO [LoginwithInvalidIdTest]: Entered a valid Email Address.
-17-08-2020 15:04:52 INFO [LoginwithInvalidIdTest]: Clicked on the Next Button.
-17-08-2020 15:04:52 INFO [LoginwithInvalidIdTest]: already insered , it should be updated
-17-08-2020 15:04:53 INFO [LoginwithInvalidIdTest]: Entered a valid password.
-17-08-2020 15:04:54 INFO [LoginwithInvalidIdTest]: Clicked on the Login Button.
-17-08-2020 15:04:54 INFO [LoginwithInvalidIdTest]: search for xpath //input[@name='password']
-17-08-2020 15:04:54 INFO [LoginwithInvalidIdTest]: already insered , it should be updated
-17-08-2020 15:04:54 INFO [LoginwithInvalidIdTest]: already insered , it should be updated
+19-08-2020 10:52:32 INFO [LoginwithInvalidIdTest]: Started the automated function  : Test_LoginWithInvalidPassword
+19-08-2020 10:52:37 INFO [LoginwithInvalidIdTest]: Entered a valid URL.
+19-08-2020 10:52:37 INFO [LoginwithInvalidIdTest]: Entered a valid Email Address.
+19-08-2020 10:52:38 INFO [LoginwithInvalidIdTest]: Clicked on the Next Button.
+19-08-2020 10:52:40 INFO [LoginwithInvalidIdTest]: Entered an invalid password.
+19-08-2020 10:52:40 INFO [LoginwithInvalidIdTest]: Clicked on the log in Button.
+19-08-2020 10:52:40 INFO [LoginwithInvalidIdTest]: already insered , it should be updated
